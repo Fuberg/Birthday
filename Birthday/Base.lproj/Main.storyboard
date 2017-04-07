@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ImP-wu-trn">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="pdY-Zr-bGE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5v-g8-uDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="kma-Sz-FWL" customClass="UserDatesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="smU-YC-Ahd"/>
+                        <viewControllerLayoutGuide type="bottom" id="KwW-EC-kPr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="b4D-cM-vkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Ue-Nr-OD8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="kma-Sz-FWL" id="qRr-hZ-94e"/>
+                                    <outlet property="delegate" destination="kma-Sz-FWL" id="Wr1-N8-31U"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96891862149999997" green="0.55877625939999997" blue="0.073881216350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Ue-Nr-OD8" firstAttribute="leading" secondItem="b4D-cM-vkg" secondAttribute="leading" id="HCr-vK-uPM"/>
+                            <constraint firstItem="8Ue-Nr-OD8" firstAttribute="top" secondItem="b4D-cM-vkg" secondAttribute="top" id="lWC-Qe-Lzb"/>
+                            <constraint firstAttribute="bottom" secondItem="8Ue-Nr-OD8" secondAttribute="bottom" id="nOn-gd-pyV"/>
+                            <constraint firstAttribute="trailing" secondItem="8Ue-Nr-OD8" secondAttribute="trailing" id="vz6-cH-wUs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="VKZ-Gn-ibl"/>
+                    <connections>
+                        <outlet property="tableUsersBirthdays" destination="8Ue-Nr-OD8" id="fST-nL-GrF"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="349.60000000000002" y="-545.57721139430294"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="4I3-eu-oEU">
+            <objects>
+                <viewController id="OcY-cx-kvG" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JWv-mg-qgH"/>
+                        <viewControllerLayoutGuide type="bottom" id="oZl-1q-9Zy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gGQ-RD-vOC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Xm9-36-weh">
+                                <rect key="frame" x="26" y="75" width="323" height="513"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lpg-eh-GFj">
+                                        <rect key="frame" x="0.0" y="0.0" width="323" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WdS-Ch-sB1">
+                                        <rect key="frame" x="1.5" y="148.5" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="513003024.95265901">
+                                            <!--2017-04-04 12:50:24 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTc-6F-xid">
+                                        <rect key="frame" x="20" y="483" width="283" height="30"/>
+                                        <color key="backgroundColor" red="0.97014653497409331" green="0.29955334964191593" blue="0.13677945706678571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Добавить">
+                                            <color key="titleColor" red="0.97014653500000003" green="0.9692299405" blue="0.948102416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onPressAddButton:" destination="OcY-cx-kvG" eventType="touchUpInside" id="VjR-vi-GED"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rTc-6F-xid" firstAttribute="leading" secondItem="Xm9-36-weh" secondAttribute="leading" constant="20" id="0Zn-SG-6bc"/>
+                                    <constraint firstItem="Lpg-eh-GFj" firstAttribute="leading" secondItem="Xm9-36-weh" secondAttribute="leading" id="GyH-BE-DHj"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lpg-eh-GFj" secondAttribute="trailing" id="gER-3A-aFq"/>
+                                    <constraint firstAttribute="trailing" secondItem="rTc-6F-xid" secondAttribute="trailing" constant="20" id="yfp-n7-LX7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.88754215079999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oZl-1q-9Zy" firstAttribute="top" secondItem="Xm9-36-weh" secondAttribute="bottom" constant="30" id="CII-0E-D6X"/>
+                            <constraint firstItem="Xm9-36-weh" firstAttribute="leading" secondItem="gGQ-RD-vOC" secondAttribute="leadingMargin" constant="10" id="XCu-U8-leU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xm9-36-weh" secondAttribute="trailing" constant="10" id="d85-0P-LhD"/>
+                            <constraint firstItem="Xm9-36-weh" firstAttribute="top" secondItem="JWv-mg-qgH" secondAttribute="bottom" constant="55" id="yIC-hC-VbH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="qU1-VU-cAW"/>
+                    <connections>
+                        <outlet property="createButton" destination="rTc-6F-xid" id="PmV-BW-FUX"/>
+                        <outlet property="datePicker" destination="WdS-Ch-sB1" id="HJY-AL-x8g"/>
+                        <outlet property="nameField" destination="Lpg-eh-GFj" id="pOz-w4-SPS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Utj-vo-1ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399.19999999999999" y="-543.77811094452773"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XCM-z1-xEX">
+            <objects>
+                <tabBarController id="ImP-wu-trn" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="3vJ-DU-BXt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="OcY-cx-kvG" kind="relationship" relationship="viewControllers" id="Pe8-bK-6Hp"/>
+                        <segue destination="kma-Sz-FWL" kind="relationship" relationship="viewControllers" id="zzY-ac-5AK"/>
+                        <segue destination="871-j0-ZbY" kind="relationship" relationship="viewControllers" id="msg-Zn-xQn"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YhU-hI-aAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="303"/>
+        </scene>
+        <!--Item 3-->
+        <scene sceneID="aau-eY-6V2">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yQW-aI-qz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="871-j0-ZbY" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mtU-aP-i8j"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HX-R8-fjl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pfT-V4-wcS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UWU-iX-IpN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UWU-iX-IpN" secondAttribute="bottom" id="Cow-lr-siq"/>
+                            <constraint firstItem="UWU-iX-IpN" firstAttribute="leading" secondItem="pfT-V4-wcS" secondAttribute="leading" id="ftY-oe-NDy"/>
+                            <constraint firstItem="UWU-iX-IpN" firstAttribute="top" secondItem="pfT-V4-wcS" secondAttribute="top" id="lvv-Ou-nSY"/>
+                            <constraint firstAttribute="trailing" secondItem="UWU-iX-IpN" secondAttribute="trailing" id="yqF-7R-wmk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 3" id="kRD-v0-tyK" userLabel="Item 3"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1164" y="-545.57721139430294"/>
+        </scene>
+    </scenes>
+</document>
